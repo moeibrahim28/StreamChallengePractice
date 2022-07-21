@@ -11,7 +11,8 @@ public class TextStatisticsService {
         // TODO
         // Please use Streams
         String noPunctuationText = text.replaceAll("\\p{Punct}", "");
-        String[] values = noPunctuationText.split(" ");
+        String noLineBreaksText = noPunctuationText.replaceAll("\n", " ");
+        String[] values = noLineBreaksText.split(" ");
         List<String> wordsInBook= Arrays.asList(values);
         TextStatistics textStatistics= new TextStatistics();
 
