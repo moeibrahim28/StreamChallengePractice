@@ -3,6 +3,9 @@ package org.example;
 import org.example.io.StatisticsOutputService;
 import org.example.io.TextInputService;
 import org.example.statistics.TextStatisticsService;
+import org.example.statistics.model.TextStatistics;
+
+import java.io.IOException;
 
 public class Processor {
     private TextInputService textInputService;
@@ -20,7 +23,12 @@ public class Processor {
      * Get the statistics
      * Output the statistics
      */
-    public void process() {
+    public void process() throws IOException {
         // TODO
+        String bookText = textInputService.getText();
+        TextStatistics textStatistics = textStatisticsService.getStatistics(bookText);
+        statisticsOutputService.save(textStatistics);
+        System.out.println(textStatistics);
+
     }
 }

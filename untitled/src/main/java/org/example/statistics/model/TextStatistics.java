@@ -12,4 +12,14 @@ public class TextStatistics {
     private String mostCommonWord;
     private int longestWordLength;
     private double averageWordLength;
+
+    @Override
+    public String toString() {
+        return "TextStatistics{" +
+                "wordCount=" + wordCount +
+                ", mostCommonWord='" + mostCommonWord + '\'' +
+                ", longestWordLength=" + longestWordLength +
+                ", averageWordLength=" + averageWordLength +
+                '}';
+    }
 }

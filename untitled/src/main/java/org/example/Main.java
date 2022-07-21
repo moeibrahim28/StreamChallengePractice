@@ -6,9 +6,11 @@ import org.example.io.impl.JsonFileStatisticsOutputService;
 import org.example.io.impl.SampleFileTextInputService;
 import org.example.statistics.TextStatisticsService;
 
+import java.io.IOException;
+
 public class Main {
-    public static void main(String[] args) {
-        System.out.println("Hello world!");
+    public static void main(String[] args) throws IOException {
+//        System.out.println("Hello world!");
         // Prepare dependencies (wouldn't it be nice if we had a framework that could do this chore?)
         TextInputService textInputService = new SampleFileTextInputService();
         StatisticsOutputService statisticsOutputService = new JsonFileStatisticsOutputService();

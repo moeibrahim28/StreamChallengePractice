@@ -1,5 +1,7 @@
 package org.example.io;
 
+import java.io.IOException;
+
 public interface TextInputService {
-    String getText();
+    String getText() throws IOException;
 }
